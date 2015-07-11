@@ -8,7 +8,11 @@ req.addEventListener("loadstart", function(){
 });
 
 req.addEventListener("load", function(){
-  alert(this.response)
+  if (this.response == "yes") {
+    alert("yay!");
+  } else {
+    alert("aw, shucks");
+  }
 });
 
 req.send();
