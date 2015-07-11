@@ -3,10 +3,11 @@ var myLink = document.getElementById("clicker");
 var handleTheClick = function(event){
   var req = new XMLHttpRequest();
 
-  req.open("get", this.getAttribute("href"));
+  // req.open("get", this.getAttribute("href"));
+  req.open("get", "/path1");
 
   req.addEventListener("load", function(){
-    alert(this.response);
+    myLink.innerText = "Response Received";
   });
 
   req.send();
