@@ -6,14 +6,14 @@ req.addEventListener("load", function(){
   alert(this.response);
 });
 
-req.send();
+
 
 //  ---------------------------------------------------------------------------
 
 var myLink = document.getElementById("clicker");
 
 var handleTheClick = function(event){
-  // ?????????
+  req.send();
   
   // Prevent the link from refreshing the DOM.
   event.preventDefault();
