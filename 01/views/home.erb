@@ -2,5 +2,11 @@
 
 <script type="text/javascript" src="/global.js"></script>
 
-<h1>Why are you able to make requests to /info1 and /info2 even though there are no route handlers for those paths defined in app.rb?</h1>
+<h3>Why are you able to make requests to /info1 and /info2 even though there are no route handlers for those paths defined in app.rb?</h3>
 <p>We can make requests to /info1 and /info2 even without route handlers because we're the HTMLHttpRequest object.</p>
+
+<h3>Why is the XHR object's request path /info1 instead of /public/info1?</h3>
+<p>We can leave off the public part of the path because the 'public' folder is part of Sinatra.  It knows to look for non-erb (non-html) files in the public directory.</p>
+
+<h3>Within the addEventListener function, what does this represent?</h3>
+<p>this represents whatever instance of the an object we're currently *in/using*.  In this our case for this exercise, this refers to 'req', which is an instance of object HTMLHttpRequest.</p>
