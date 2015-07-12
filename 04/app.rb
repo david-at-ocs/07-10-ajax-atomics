@@ -5,6 +5,5 @@ get "/" do
 end
 
 get "/:msg" do
-  message = params["msg"]
-  return "You wrote #{message}"
+  erb :"message"
 end
