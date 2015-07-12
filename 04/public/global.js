@@ -2,10 +2,11 @@ var myLink = document.getElementById("clicker");
 
 var handleTheClick = function(event){
   var thisLink = this;
+  var typed = document.getElementById("word")
   
   var req = new XMLHttpRequest();
 
-  req.open("get", "/whats_up");
+  req.open("get", "/" + typed.value);
 
   req.addEventListener("load", function(){    
     thisLink.innerText = this.response;
