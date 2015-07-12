@@ -1,13 +1,15 @@
 var myLink = document.getElementById("clicker");
 
-var handleTheClick = function(event){
-  var path = this
+var handleTheClick = function(event) {
+  // var link = this;
   var req = new XMLHttpRequest();
 
-  req.open("get", this.getAttribute("href"));
+  req.open("get", myLink.getAttribute("href"));
+  // req.open("get", link.getAttribute("href"));
 
-  req.addEventListener("load", function(){
-    path.innerText = "Response Recieved";
+  req.addEventListener("load", function(){    
+    myLink.innerText = this.response;
+    // link.innerText = this.response;
   });
 
   req.send();
